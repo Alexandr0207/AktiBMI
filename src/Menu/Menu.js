@@ -6,7 +6,7 @@ import Vaga from '../Vaga/Vaga';
 import History from '../History/History';
 import {Switch, Route} from 'react-router-dom';
 const Menu = ({growth,weight,match,wantWeight,date,resultSub, male}) => {
-    console.log(match);
+    // console.log(match.path);
     return (
         <div className="menu">
             <Header/>

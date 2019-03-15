@@ -8,13 +8,13 @@ import moment from 'moment';
 class App extends Component {
   state={
     gender: '',
-    male: false,
-    female: false,
-    growth: '',
-    weight: '',
-    wantWeight: '',
+    male: JSON.parse(localStorage.getItem('male')) || false,
+    female: JSON.parse(localStorage.getItem('female')) || false,
+    growth: JSON.parse(localStorage.getItem('growth')) || '',
+    weight: JSON.parse(localStorage.getItem('weight')) || '',
+    wantWeight: JSON.parse(localStorage.getItem('wantWeight')) || '',
     date: '',
-    resultSub: 0,
+    resultSub: JSON.parse(localStorage.getItem('resultSub')) || 0,
 
   }
   
@@ -22,15 +22,18 @@ class App extends Component {
     this.time();
   }
 
-  inputChange=(e)=>{
-      console.log(e);
+  inputChange = async (e) =>{
+      // console.log(e.target.name);
     let value=e.target.value;
     let name=e.target.name;
-    this.setState({
+    await this.setState({
         [name]: value,
     })
+    localStorage.setItem('weight', JSON.stringify(this.state.weight));
+    localStorage.setItem('wantWeight', JSON.stringify(this.state.wantWeight));
+    localStorage.setItem('growth', JSON.stringify(this.state.growth));
   }
-  time=()=>{
+  time = () => {
     setInterval(()=>{
       let getTime=moment().format('L');
       this.setState({
@@ -38,31 +41,37 @@ class App extends Component {
       })
     }, 0)
   }
-  sub=()=>{
-    this.setState({
+  sub = async () => {
+    await this.setState({
       resultSub: this.state.weight - this.state.wantWeight,
     })
+    localStorage.setItem('resultSub', JSON.stringify(this.state.resultSub));
   }
 
-  checkMale = () => {
-    this.setState({
+  checkMale = async() => {
+    await this.setState({
       male: true,
       female: false
     })
+    localStorage.setItem('male', JSON.stringify(this.state.male));
+    // let result = JSON.parse(localStorage.getItem('favorList')) || []
+    // result.push(list);
+    // localStorage.setItem('favorList', JSON.stringify(result));
   }
 
-  checkFemale = () => {
-    this.setState({
+  checkFemale = async() => {
+    await this.setState({
       female: true,
       male: false
     })
+    localStorage.setItem('female', JSON.stringify(this.state.female));
   }
 
   render() {
     const{gender,growth,weight,wantWeight,date,resultSub, male, female}=this.state;
     // console.log(date);
     return (
-      <div>
+      <div className="App">
         
         {/* <Menu/> */}
         <Switch>
