@@ -1,0 +1,26 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.root_vaga{
+    max-width: 320px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    justify-content: space-around;
+    
+
+}
+.vaga_now{
+    width: 40%;
+}
+.vaga_desired{
+    width: 40%;
+}
+.speedometer{
+    width: 100%;
+    display: flex;
+    margin-top: 3rem;
+    justify-content: center;
+}

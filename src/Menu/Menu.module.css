@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.menu{
+    max-width: 320px;
+    margin: auto;
+}
+.but_vaga, .but_history{
+    text-decoration: none;
+    width: 100px;
+    height: 50px;
+    background: #00FA9A;
+    display: flex;
+    color: white;
+    font-weight: 700;
+    transition: 2s;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid black;
+}
+
+.but_vaga:hover, .but_history:hover{
+    background: white;
+    color: #FF4500;
+}
+
+.ul{
+    max-width: 320px;
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+}
