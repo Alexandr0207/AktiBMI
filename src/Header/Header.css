@@ -3,13 +3,11 @@
     padding: 0;
 }
 .header{
-    max-width: 320px;
+    max-width: 100%;
     text-align: center;
-    height: 5rem;
+    height: 3rem;
     background-color: greenyellow;
     margin: auto;
-    margin-bottom: 2rem;
-
 }
    
 .title{

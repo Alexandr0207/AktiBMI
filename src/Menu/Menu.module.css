@@ -3,21 +3,23 @@
     padding: 0;
 }
 .menu{
-    max-width: 320px;
+    max-width: 100%;
+    background-color: #ededed;
+    min-height: 100vh;
     margin: auto;
 }
 .but_vaga, .but_history{
     text-decoration: none;
-    width: 100px;
+    width: 50%;
     height: 50px;
-    background: #00FA9A;
+    background: #f7f7f7;
     display: flex;
-    color: white;
+    color: #8f8f8f;
     font-weight: 700;
     transition: 2s;
     justify-content: center;
     align-items: center;
-    border: 3px solid black;
+    /* border: 3px solid black; */
 }
 
 .but_vaga:hover, .but_history:hover{
@@ -26,7 +28,7 @@
 }
 
 .ul{
-    max-width: 320px;
+    max-width: 100%;
     display: flex;
     margin: auto;
     justify-content: space-around;

@@ -6,8 +6,8 @@ import {NavLink} from 'react-router-dom';
 const StartPage = ({gender,growth,weight,inputChange,wantWeight, sub , checkMale, male, female, checkFemale}) => {
     return (
         <div className="root">
-            <img src={img} alt="startpage" />
-            <h2 className="title">Добро пожаловать в aktiBMI</h2>
+            {/* <img src={img} alt="startpage" /> */}
+            <h2 className="titley">Добро пожаловать в aktiBMI</h2>
             <p className="page">Прежде чем начать, пожалуйста, введите ваши данные</p>
                     <ul className="ul">
                         <li className="li">
@@ -19,19 +19,21 @@ const StartPage = ({gender,growth,weight,inputChange,wantWeight, sub , checkMale
                             </div>
                         </li>
                         <li className="li">
-                            <p className='p'>Вес</p>
-                            <input type="text" name="weight" className="weight" value={weight} onChange={inputChange}/>
-                            <p className="units">kg</p>
+                        <p className="p">Вес</p>
+                        <div className="MF">  
+                            <input type="text" className="input" name="weight" placeholder="0 кг" value={`${weight}`} onChange={inputChange}/>
+                            </div>
+                            {/* <p className="units">kg</p> */}
                         </li>
                         <li className="li">
-                            <p className='p'>Желаемый Вес</p>
-                            <input type="text" name="wantWeight" className="wantWeight" value={wantWeight} onChange={inputChange}/>
-                            <p className="units">kg</p>
+                        <p className="p">Желаемый вес</p>  
+                            <input type="text" className="input" name="wantWeight" value={wantWeight} placeholder="0 кг" onChange={inputChange}/>
+                            {/* <p className="units">kg</p> */}
                         </li>
                         <li className="li">
-                            <p className="p">Рост</p>
-                            <input type="text" name="growth" className="growth" value={growth} onChange={inputChange}/>
-                            <p className="units">cm</p>
+                        <p className="p">Рост</p>  
+                            <input type="text" className="input" name="growth" value={growth} placeholder="0 см" onChange={inputChange}/>
+                            {/* <p className="units">cm</p> */}
                         </li>
                     </ul>
             <div><NavLink onClick={sub} to='/save' className='but_save'>Сохранить и продолжить</NavLink></div>

@@ -8,7 +8,7 @@ import {Switch, Route} from 'react-router-dom';
 const Menu = ({growth,weight,match,wantWeight,date,resultSub, male}) => {
     // console.log(match.path);
     return (
-        <div className="menu">
+        <div className={styles.menu}>
             <Header/>
            <ul className={styles.ul}>
               <NavLink className={styles.but_vaga} to={`${match.path}/`}>Vaga</NavLink>
