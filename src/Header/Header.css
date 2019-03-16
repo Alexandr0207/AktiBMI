@@ -1,13 +1,26 @@
-*{
+/* *{
     margin: 0;
     padding: 0;
-}
+} */
+
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
+
 .header{
     max-width: 100%;
     text-align: center;
     height: 3rem;
-    background-color: greenyellow;
+    background-color: #97c00e;
     margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.BMI{
+    /* font-family: 'Kaushan Script', cursive; */
+    font-family: 'Kaushan Script', cursive;
+    font-weight: 400;
+    font-size: 1.8rem;
 }
    
 .title{

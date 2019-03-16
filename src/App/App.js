@@ -11,8 +11,8 @@ class App extends Component {
     male: JSON.parse(localStorage.getItem('male')) || false,
     female: JSON.parse(localStorage.getItem('female')) || false,
     growth: JSON.parse(localStorage.getItem('growth')) || '',
-    weight: JSON.parse(localStorage.getItem('weight')) || '',
     wantWeight: JSON.parse(localStorage.getItem('wantWeight')) || '',
+    weight: JSON.parse(localStorage.getItem('weight')) || '',
     date: '',
     resultSub: JSON.parse(localStorage.getItem('resultSub')) || 0,
 
@@ -80,6 +80,7 @@ class App extends Component {
             gender={gender} 
             growth={growth} 
             weight={weight}
+            wantWeight={wantWeight}
             sub={this.sub}
             checkMale={this.checkMale}
             checkFemale={this.checkFemale}

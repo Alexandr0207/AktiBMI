@@ -11,8 +11,8 @@ const Menu = ({growth,weight,match,wantWeight,date,resultSub, male}) => {
         <div className={styles.menu}>
             <Header/>
            <ul className={styles.ul}>
-              <NavLink className={styles.but_vaga} to={`${match.path}/`}>Vaga</NavLink>
-              <NavLink className={styles.but_history} to={`${match.path}/history`}>History</NavLink>
+              <NavLink className={styles.but_vaga} activeClassName={styles.but_vagaActive} to={`${match.path}/`}>Vaga</NavLink>
+              <NavLink className={styles.but_history} activeClassName={styles.but_historyActive} to={`${match.path}/history`}>History</NavLink>
            </ul>
            <Switch>
             <Route exact path={`${match.path}/`} render={() =>

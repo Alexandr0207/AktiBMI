@@ -4,7 +4,6 @@ import ReactSpeedometer from "react-d3-speedometer"
 const Vaga = ({weight, growth,wantWeight,date,resultSub, male}) => {
     return (
         <div className="root_vaga">
-
             <div className='vaga_now'>
               <p>{`Пол: ${male ? 'Мужской' : 'Женский'}`}</p>
               <p className="vaga_title_now_weight">Текущий вес:</p>
@@ -21,7 +20,7 @@ const Vaga = ({weight, growth,wantWeight,date,resultSub, male}) => {
             
             <div className="speedometer">
                    <ReactSpeedometer
-                        maxValue={40}
+                        maxValue={50}
                         value={+(weight/((growth/100)*(growth/100))).toFixed(2)}
                         needleColor="red"
                         startColor="green"

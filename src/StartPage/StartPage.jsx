@@ -8,7 +8,7 @@ const StartPage = ({gender,growth,weight,inputChange,wantWeight, sub , checkMale
         <div className="root">
             {/* <img src={img} alt="startpage" /> */}
             <h2 className="titley">Добро пожаловать в aktiBMI</h2>
-            <p className="page">Прежде чем начать, пожалуйста, введите ваши данные</p>
+            <p className="page">Прежде чем начать, пожалуйста, введите ваши данные.</p>
                     <ul className="ul">
                         <li className="li">
                             <p className="p">Пол</p>  

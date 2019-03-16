@@ -11,20 +11,32 @@
 .but_vaga, .but_history{
     text-decoration: none;
     width: 50%;
-    height: 50px;
+    height: 40px;
     background: #f7f7f7;
     display: flex;
     color: #8f8f8f;
     font-weight: 700;
-    transition: 2s;
+    /* transition: 2s; */
     justify-content: center;
     align-items: center;
     /* border: 3px solid black; */
 }
 
-.but_vaga:hover, .but_history:hover{
+/* .but_vaga:hover, .but_history:hover{
     background: white;
     color: #FF4500;
+} */
+
+.but_vagaActive{
+    background: #ededed;
+}
+
+.but_historyActive{
+    background: #ededed;
+}
+
+.but_historyActive > .but_vagaActive{
+    background: #f7f7f7;
 }
 
 .ul{
